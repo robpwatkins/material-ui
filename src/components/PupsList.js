@@ -1,12 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import { Card, CardContent, CardActions, CardMedia, Button, Typography } from '@material-ui/core/';
 
 class PupsList extends React.Component {
 
@@ -18,17 +13,17 @@ class PupsList extends React.Component {
           placeholder="Search for puppers"
           margin="normal"
           onChange={this.inputChange} />
-        <Grid container spacing={24} style={{padding: 24}}>
+        <Grid container spacing={2} style={{padding: 24}}>
         {this.props.pups.map((pup, i) => {
           return (
-            <Grid item xs={12} sm={6} lg={4} xl={3}>
+            <Grid key={i} item xs={12} sm={6} lg={4} xl={3}>
               <Card>
                 <CardMedia style={{height: 0, paddingTop: '56.25%'}} 
                 image={pup} 
                 title="puppers"
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="headline" component="h2">
+                  <Typography gutterBottom variant="h4">
                     here's a pupper
                   </Typography>
                 </CardContent>
