@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-// import PupsList from './components/PupsList';
 import { AppBar, Fab, Box, InputBase } from '@material-ui/core/';
 import { Menu, Search } from '@material-ui/icons';
 
